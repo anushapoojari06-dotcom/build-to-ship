@@ -1,0 +1,26 @@
+# Windows system shortcuts
+Desktop.lnk
+Downloads.lnk
+desktop.ini
+*.lnk
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.*
+*.env
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Production builds
+dist/
+**/dist/
+build/
+
+# Logs
+*.log
