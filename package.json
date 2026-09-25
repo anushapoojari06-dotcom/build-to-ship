@@ -1,0 +1,9 @@
+{
+  "name": "voice-assist-web-app",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "cd voice-assist/client && npm install && npm run build",
+    "start": "cd voice-assist/client && npm run dev"
+  }
+}

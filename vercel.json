@@ -1,0 +1,8 @@
+{
+  "buildCommand": "cd voice-assist/client && npm install && npm run build",
+  "outputDirectory": "voice-assist/client/dist",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

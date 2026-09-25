@@ -1,4 +1,11 @@
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+function getApiBase() {
+  const envUrl = import.meta.env.VITE_API_BASE_URL;
+  if (!envUrl || envUrl.startsWith('eyJ') || (!envUrl.startsWith('http') && !envUrl.startsWith('/'))) {
+    return 'http://localhost:5000/api';
+  }
+  return envUrl;
+}
+const API_BASE = getApiBase();
 
 // Check if currently operating in offline mode
 function isOffline() {
