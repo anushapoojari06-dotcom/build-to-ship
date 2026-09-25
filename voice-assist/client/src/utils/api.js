@@ -7,11 +7,14 @@ function getApiBase() {
 }
 const API_BASE = getApiBase();
 
-// Check if currently operating in offline mode
+// Check if currently operating in offline mode or standalone browser mode
 function isOffline() {
   const isSimulated = localStorage.getItem('voiceassist_simulated_offline') === 'true';
   const realOffline = typeof navigator !== 'undefined' && !navigator.onLine;
-  return isSimulated || realOffline;
+  const isHttpsWithLocalApi = typeof window !== 'undefined' &&
+    window.location.protocol === 'https:' &&
+    API_BASE.startsWith('http://localhost');
+  return isSimulated || realOffline || isHttpsWithLocalApi;
 }
 
 // Local cache keys

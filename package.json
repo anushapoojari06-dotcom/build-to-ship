@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "cd voice-assist/client && npm install && npm run build",
-    "start": "cd voice-assist/client && npm run dev"
+    "build": "node build.js",
+    "start": "node build.js"
   }
 }

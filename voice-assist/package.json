@@ -1,0 +1,9 @@
+{
+  "name": "voice-assist",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm --prefix client install && npm --prefix client run build && node -e \"require('fs').cpSync('client/dist', 'dist', {recursive: true})\"",
+    "start": "npm --prefix client run dev"
+  }
+}
